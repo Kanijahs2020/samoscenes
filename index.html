@@ -36,18 +36,18 @@
 *,*::before,*::after{margin:0;padding:0;box-sizing:border-box;}
 html{scroll-behavior:smooth;}
 body{font-family:var(--sans);background:var(--cream);color:var(--bark);overflow-x:hidden;cursor:none;}
-
+ 
 /* Warm paper texture */
 body::before{content:'';position:fixed;inset:0;z-index:9999;pointer-events:none;
   background-image:url("data:image/svg+xml,%3Csvg viewBox='0 0 300 300' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.65' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E");
   opacity:.022;mix-blend-mode:multiply;}
-
+ 
 /* CURSOR */
 #cur{width:8px;height:8px;background:var(--gold);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9998;transform:translate(-50%,-50%);transition:width .18s,height .18s;}
 #cur2{width:30px;height:30px;border:1.5px solid rgba(212,137,26,.4);border-radius:50%;position:fixed;top:0;left:0;pointer-events:none;z-index:9997;transform:translate(-50%,-50%);transition:left .1s,top .1s,width .22s,height .22s;}
 body.hov #cur{width:16px;height:16px;background:var(--gold2);}
 body.hov #cur2{width:52px;height:52px;border-color:rgba(212,137,26,.6);}
-
+ 
 /* NAV */
 nav{position:fixed;top:0;left:0;right:0;z-index:500;display:flex;align-items:center;justify-content:space-between;padding:1.75rem 4rem;transition:all .4s;}
 nav.stuck{padding:1rem 4rem;background:rgba(250,246,238,.95);backdrop-filter:blur(16px);border-bottom:1px solid var(--parch);}
@@ -60,7 +60,7 @@ nav.stuck{padding:1rem 4rem;background:rgba(250,246,238,.95);backdrop-filter:blu
 .nav-cta:hover{background:var(--green2)!important;}
 .burger{display:none;flex-direction:column;gap:5px;cursor:pointer;z-index:600;}
 .burger span{display:block;width:22px;height:1.5px;background:var(--bark);transition:.3s;}
-
+ 
 /* HERO */
 #hero{min-height:100vh;position:relative;display:flex;align-items:center;overflow:hidden;}
 .hero-bg{
@@ -93,14 +93,14 @@ nav.stuck{padding:1rem 4rem;background:rgba(250,246,238,.95);backdrop-filter:blu
 .hval-sub{font-size:.75rem;font-weight:300;color:var(--fog);line-height:1.6;}
 .hval-line{position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--gold);transform:scaleY(0);transition:transform .35s;transform-origin:bottom;}
 .hval:hover .hval-line{transform:scaleY(1);}
-
+ 
 /* scroll indicator */
 .hero-scroll{position:absolute;bottom:2.5rem;left:4rem;z-index:3;display:flex;align-items:center;gap:12px;opacity:0;animation:fi 1s 1.3s forwards;}
 .sline{width:40px;height:1px;background:var(--lgray);overflow:hidden;position:relative;}
 .sline::after{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:var(--gold);animation:ls 1.8s ease infinite;}
 @keyframes ls{to{left:200%;}}
 .stxt{font-size:.6rem;letter-spacing:.2em;text-transform:uppercase;color:var(--lgray);}
-
+ 
 /* SECTIONS */
 .sec{padding:8rem 4rem;}
 .si{max-width:1200px;margin:0 auto;}
@@ -110,7 +110,7 @@ nav.stuck{padding:1rem 4rem;background:rgba(250,246,238,.95);backdrop-filter:blu
 .hb em{font-style:italic;color:var(--gold);}
 .hb strong{font-weight:700;}
 .bt{font-size:.9rem;font-weight:300;line-height:1.9;color:var(--dusk);}
-
+ 
 /* REVEALS */
 .r{opacity:0;transform:translateY(26px);transition:opacity .85s,transform .85s;}
 .rl{opacity:0;transform:translateX(-26px);transition:opacity .85s,transform .85s;}
@@ -118,7 +118,7 @@ nav.stuck{padding:1rem 4rem;background:rgba(250,246,238,.95);backdrop-filter:blu
 .r.in,.rl.in,.rr.in{opacity:1;transform:none;}
 [data-d="1"]{transition-delay:.1s;}[data-d="2"]{transition-delay:.2s;}
 [data-d="3"]{transition-delay:.3s;}[data-d="4"]{transition-delay:.4s;}[data-d="5"]{transition-delay:.5s;}
-
+ 
 /* SERVICES */
 .svc-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1.5rem;max-width:1200px;margin:3rem auto 0;}
 .svc{background:var(--white);padding:2.75rem 2.25rem;border-radius:8px;position:relative;overflow:hidden;border:1px solid var(--parch);transition:all .3s;box-shadow:0 2px 12px rgba(61,43,26,.04);}
@@ -134,7 +134,7 @@ nav.stuck{padding:1rem 4rem;background:rgba(250,246,238,.95);backdrop-filter:blu
 .svc-btn{display:inline-flex;align-items:center;gap:8px;background:var(--green);color:var(--cream);font-family:var(--sans);font-size:.68rem;font-weight:600;letter-spacing:.14em;text-transform:uppercase;padding:.7rem 1.5rem;border-radius:3px;text-decoration:none;cursor:pointer;border:none;transition:all .2s;}
 .svc-btn:hover{background:var(--green2);gap:12px;}
 .svc-tag{position:absolute;top:1.5rem;right:1.5rem;font-size:.6rem;font-weight:600;letter-spacing:.12em;text-transform:uppercase;color:var(--gold2);background:rgba(212,137,26,.1);border:1px solid rgba(212,137,26,.25);padding:3px 10px;border-radius:20px;}
-
+ 
 /* ABOUT */
 .ab-grid{display:grid;grid-template-columns:1fr 1fr;gap:7rem;align-items:center;max-width:1200px;margin:0 auto;}
 .ab-vis{position:relative;aspect-ratio:3/4;border-radius:12px;overflow:hidden;}
@@ -151,7 +151,7 @@ nav.stuck{padding:1rem 4rem;background:rgba(250,246,238,.95);backdrop-filter:blu
 .ast-l{font-size:.62rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;color:var(--lgray);margin-top:4px;}
 .ig{display:inline-flex;align-items:center;gap:10px;border:1.5px solid var(--parch);padding:.85rem 1.75rem;border-radius:4px;color:var(--bark);text-decoration:none;font-size:.7rem;font-weight:500;letter-spacing:.12em;text-transform:uppercase;transition:all .25s;}
 .ig:hover{border-color:var(--green);color:var(--green);background:var(--greenpale);}
-
+ 
 /* PROCESS */
 .proc-grid{display:grid;grid-template-columns:1fr 1.8fr;gap:6rem;max-width:1100px;margin:0 auto;}
 .pstep{display:flex;gap:2rem;padding:2rem 0;border-bottom:1px solid var(--parch);cursor:default;}
@@ -160,7 +160,7 @@ nav.stuck{padding:1rem 4rem;background:rgba(250,246,238,.95);backdrop-filter:blu
 .pstep:hover .pstep-n{color:rgba(212,137,26,.5);}
 .pstep-title{font-family:var(--serif);font-size:1.05rem;font-weight:600;color:var(--bark);margin-bottom:.4rem;}
 .pstep-desc{font-size:.8rem;font-weight:300;color:var(--fog);line-height:1.8;}
-
+ 
 /* CONTACT */
 .ct-grid{display:grid;grid-template-columns:1fr 1.3fr;gap:6rem;max-width:1200px;margin:0 auto;}
 .ct-det{display:flex;align-items:center;gap:12px;margin-bottom:1.1rem;font-size:.82rem;color:var(--fog);}
@@ -183,7 +183,7 @@ nav.stuck{padding:1rem 4rem;background:rgba(250,246,238,.95);backdrop-filter:blu
 .c-note{font-size:.68rem;color:var(--lgray);text-align:center;letter-spacing:.06em;}
 .c-ok{display:none;text-align:center;padding:2.5rem;}
 .c-ok p{font-family:var(--serif);font-size:1.4rem;font-style:italic;color:var(--green2);}
-
+ 
 /* MODALS */
 .modal-bg{display:none;position:fixed;inset:0;background:rgba(44,26,10,.55);z-index:800;align-items:center;justify-content:center;padding:1.5rem;backdrop-filter:blur(4px);}
 .modal-bg.open{display:flex;}
@@ -232,7 +232,7 @@ nav.stuck{padding:1rem 4rem;background:rgba(250,246,238,.95);backdrop-filter:blu
 .dep-vm:hover{background:#2a7ab0;}
 .dep-talk{background:var(--bark);color:var(--cream);}
 .dep-talk:hover{background:var(--bark2);}
-
+ 
 /* ADMIN */
 .adm-panel{display:none;position:fixed;inset:0;z-index:900;background:#F5F0E8;overflow:auto;}
 .adm-panel.open{display:flex;flex-direction:column;}
@@ -270,7 +270,7 @@ tr:hover td{background:var(--warm);}
 .adm-login{position:fixed;inset:0;background:rgba(44,26,10,.8);z-index:1000;display:flex;align-items:center;justify-content:center;}
 .adm-login-box{background:var(--cream);padding:2.5rem;max-width:360px;width:100%;border-radius:12px;border:1px solid var(--parch);}
 .adm-login-box h3{font-family:var(--serif);font-size:1.3rem;font-weight:600;color:var(--bark);margin-bottom:1.5rem;}
-
+ 
 /* FOOTER */
 footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem;}
 .f-logo{font-family:var(--serif);font-size:1.15rem;font-weight:700;color:var(--cream);}
@@ -279,15 +279,15 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
 .f-links{display:flex;gap:2rem;}
 .f-links a{font-size:.62rem;font-weight:400;letter-spacing:.14em;text-transform:uppercase;color:rgba(250,246,238,.35);text-decoration:none;transition:color .2s;}
 .f-links a:hover{color:var(--goldsft);}
-
+ 
 /* Alt BGs */
 .bg-warm{background:var(--warm);}
 .bg-white{background:var(--white);}
-
+ 
 /* ANIMS */
 @keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
 @keyframes fi{from{opacity:0}to{opacity:1}}
-
+ 
 /* MOBILE */
 @media(max-width:900px){
   nav{padding:1.2rem 1.5rem;}nav.stuck{padding:.9rem 1.5rem;}
@@ -312,9 +312,9 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
 </style>
 </head>
 <body>
-
+ 
 <div id="cur"></div><div id="cur2"></div>
-
+ 
 <!-- ADMIN LOGIN -->
 <div class="adm-login" id="adm-login" style="display:none">
   <div class="adm-login-box">
@@ -325,7 +325,7 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
     <button onclick="document.getElementById('adm-login').style.display='none'" style="width:100%;margin-top:.5rem;background:none;border:none;color:var(--fog);font-size:.78rem;cursor:pointer;padding:.5rem">Cancel</button>
   </div>
 </div>
-
+ 
 <!-- ADMIN PANEL -->
 <div class="adm-panel" id="adm-panel">
   <div class="adm-top">
@@ -343,7 +343,7 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
     <div class="adm-main" id="adm-main"></div>
   </div>
 </div>
-
+ 
 <!-- NAV -->
 <nav id="nav">
   <a href="#hero" class="logo">Samo<em>scenes</em></a>
@@ -357,12 +357,12 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
   </div>
   <div class="burger" id="burger" onclick="document.getElementById('navlinks').classList.toggle('open')"><span></span><span></span><span></span></div>
 </nav>
-
+ 
 <!-- HERO -->
 <section id="hero">
   <div class="hero-bg"></div>
   <div class="hero-sun"></div>
-
+ 
   <!-- Foliage SVG -->
   <div class="hero-foliage">
     <svg viewBox="0 0 1440 300" preserveAspectRatio="xMidYMax slice" xmlns="http://www.w3.org/2000/svg" style="width:100%;height:100%">
@@ -389,7 +389,7 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
       <circle cx="1050" cy="277" r="3" fill="#E8A840" opacity=".4"/>
     </svg>
   </div>
-
+ 
   <div class="hero-content">
     <div class="hero-tag">Sacramento, CA · Cinematic Production</div>
     <div style="font-family:var(--serif);font-size:clamp(1rem,1.8vw,1.3rem);font-style:italic;font-weight:400;color:var(--gold2);margin-bottom:1.5rem;max-width:480px;line-height:1.5;opacity:0;animation:fu .9s .28s forwards;">"I believe in creating visibility for amazing stories and amazing people."</div>
@@ -404,7 +404,7 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
       <a href="#contact" class="btn-ghost-grn">Get in Touch <span>→</span></a>
     </div>
   </div>
-
+ 
   <!-- Values panel -->
   <div class="hero-values">
     <div class="hval">
@@ -426,10 +426,10 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
       <div class="hval-sub">2 shoots/month<br>Full attention</div>
     </div>
   </div>
-
+ 
   <div class="hero-scroll"><div class="sline"></div><span class="stxt">Scroll</span></div>
 </section>
-
+ 
 <!-- SERVICES -->
 <section id="services" class="sec bg-warm">
   <div class="si">
@@ -472,7 +472,7 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
     </div>
   </div>
 </section>
-
+ 
 <!-- ABOUT -->
 <section id="about" class="sec bg-white">
   <div class="ab-grid si">
@@ -537,7 +537,7 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
     </div>
   </div>
 </section>
-
+ 
 <!-- PROCESS -->
 <section id="process" class="sec bg-warm">
   <div class="proc-grid si">
@@ -556,7 +556,7 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
     </div>
   </div>
 </section>
-
+ 
 <!-- CONTACT -->
 <section id="contact" class="sec bg-white">
   <div class="ct-grid si">
@@ -597,7 +597,7 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
     </div>
   </div>
 </section>
-
+ 
 <footer>
   <div class="f-logo">Samo<em>scenes</em></div>
   <div class="f-copy">© 2025 Samoscenes · Kanijah Samosino · Natomas, Sacramento CA</div>
@@ -607,7 +607,7 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
     <a href="#contact">Contact</a>
   </div>
 </footer>
-
+ 
 <!-- DOCUMENTARY MODAL -->
 <div class="modal-bg" id="modal-doc">
   <div class="modal">
@@ -716,7 +716,7 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
     </div>
   </div>
 </div>
-
+ 
 <!-- EVENT MODAL -->
 <div class="modal-bg" id="modal-event">
   <div class="modal">
@@ -749,7 +749,7 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
     </div>
   </div>
 </div>
-
+ 
 <!-- CONTENT MODAL -->
 <div class="modal-bg" id="modal-content">
   <div class="modal">
@@ -778,7 +778,7 @@ footer{background:var(--bark);padding:2.75rem 4rem;display:flex;align-items:cent
     </div>
   </div>
 </div>
-
+ 
 <script>
 // CURSOR
 const cur=document.getElementById('cur'),cur2=document.getElementById('cur2');
@@ -786,14 +786,14 @@ let mx=0,my=0,rx=0,ry=0;
 document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY;cur.style.left=mx+'px';cur.style.top=my+'px';});
 setInterval(()=>{rx+=(mx-rx)*.13;ry+=(my-ry)*.13;cur2.style.left=rx+'px';cur2.style.top=ry+'px';},16);
 document.querySelectorAll('a,button,.q-opt,.svc,.pstep,.hval').forEach(el=>{el.addEventListener('mouseenter',()=>document.body.classList.add('hov'));el.addEventListener('mouseleave',()=>document.body.classList.remove('hov'));});
-
+ 
 // NAV
 window.addEventListener('scroll',()=>document.getElementById('nav').classList.toggle('stuck',scrollY>60));
 function cn(){document.getElementById('navlinks').classList.remove('open');}
-
+ 
 // REVEALS
 (()=>{const o=new IntersectionObserver(es=>{es.forEach(e=>{if(e.isIntersecting)e.target.classList.add('in');});},{threshold:.1,rootMargin:'0px 0px -40px 0px'});document.querySelectorAll('.r,.rl,.rr').forEach(el=>o.observe(el));})();
-
+ 
 // STORAGE
 async function load(k){try{const r=await window.storage.get(k,true);return r?JSON.parse(r.value):null;}catch{return null;}}
 async function save(k,v){try{await window.storage.set(k,JSON.stringify(v),true);}catch{}}
@@ -802,7 +802,7 @@ async function loadDB(){const d=await load('ss_db');if(d)DB=d;}
 async function saveDB(){await save('ss_db',DB);}
 loadDB();
 function addInquiry(data){DB.inquiries.unshift({...data,id:'i'+Date.now(),at:Date.now(),status:'pending'});saveDB();}
-
+ 
 // MILEAGE
 const HOME_LAT=38.6490,HOME_LNG=-121.5330,RATE=0.67;
 function geocodeApprox(addr){
@@ -813,12 +813,12 @@ function geocodeApprox(addr){
 }
 function haversine(la1,lo1,la2,lo2){const R=3958.8,d1=(la2-la1)*Math.PI/180,d2=(lo2-lo1)*Math.PI/180,a=Math.sin(d1/2)**2+Math.cos(la1*Math.PI/180)*Math.cos(la2*Math.PI/180)*Math.sin(d2/2)**2;return R*2*Math.atan2(Math.sqrt(a),Math.sqrt(1-a));}
 function calcTravel(addr){const c=geocodeApprox(addr);if(!c)return null;const m=haversine(HOME_LAT,HOME_LNG,c.lat,c.lng),rt=m*2,cost=Math.round(rt*RATE);return{miles:Math.round(m),roundTrip:Math.round(rt),cost};}
-
+ 
 // MODALS
 function openModal(t){document.getElementById('modal-'+t).classList.add('open');}
 function closeModal(t){document.getElementById('modal-'+t).classList.remove('open');}
 document.querySelectorAll('.modal-bg').forEach(m=>m.addEventListener('click',e=>{if(e.target===m)m.classList.remove('open');}));
-
+ 
 // DOC QUESTIONNAIRE
 let dData={fn:'',ln:'',em:'',ph:'',subject:'',feel:'',style:'',length:'',loc:'',when:'',vis:'',ref:'',budget:''};
 let dCur=1;
@@ -847,9 +847,12 @@ function dSubmit(){
   document.getElementById('d-breakdown').innerHTML=html;
   document.getElementById('d-result-price').textContent='$'+total.toLocaleString()+'+';
   addInquiry({type:'documentary',name:dData.fn+' '+dData.ln,email:dData.em,phone:dData.ph,subject:dData.subject,feel:dData.feel,style:dData.style,length:dData.length,location:dData.loc,when:dData.when,vision:dData.vis,refs:dData.ref,budget:dData.budget,estimate:total,travel:travel});
+  sendEmail('Documentary Film', dData.fn+' '+dData.ln, dData.em,
+    `Subject: ${dData.subject}\nFeeling: ${dData.feel}\nStyle: ${dData.style}\nLength: ${dData.length}\nLocation: ${dData.loc}\nTimeline: ${dData.when}\nBudget: ${dData.budget}\nEstimate: $${total}${travel?' (incl. $'+travel+' travel)':''}\nVision: ${dData.vis}\nRefs: ${dData.ref}`
+  );
   document.getElementById('ds8').classList.remove('on');document.getElementById('ds-result').classList.add('on');document.getElementById('doc-prog').style.width='100%';
 }
-
+ 
 // EVENT FORM
 function submitEvent(){
   const fn=document.getElementById('e-fn').value.trim(),em=document.getElementById('e-em').value.trim(),dur=document.getElementById('e-dur').value,loc=document.getElementById('e-loc').value.trim();
@@ -866,10 +869,13 @@ function submitEvent(){
   document.getElementById('e-breakdown').innerHTML=html;
   document.getElementById('e-price').textContent='$'+total.toLocaleString()+'+';
   addInquiry({type:'event',name:fn,email:em,eventType:document.getElementById('e-type').value,duration:dur,date:document.getElementById('e-date').value,location:loc,vision:document.getElementById('e-vis').value,estimate:total,travel});
+  sendEmail('Day Event', fn, em,
+    `Event Type: ${document.getElementById('e-type').value}\nDuration: ${dur}\nDate: ${document.getElementById('e-date').value}\nLocation: ${loc}\nEstimate: $${total}${travel?' (incl. $'+travel+' travel)':''}\nDetails: ${document.getElementById('e-vis').value}`
+  );
   document.querySelectorAll('#modal-event .ff,#modal-event .btn-fwd').forEach(el=>el.style.display='none');
   document.getElementById('e-result').style.display='block';
 }
-
+ 
 // CONTENT FORM
 function submitContent(){
   const name=document.getElementById('c2-name').value.trim(),em=document.getElementById('c2-em').value.trim(),qty=document.getElementById('c2-qty').value,loc=document.getElementById('c2-loc').value.trim();
@@ -879,18 +885,24 @@ function submitContent(){
   const dr=document.getElementById('c2-dist');if(t&&loc){dr.style.display='block';dr.textContent=`📍 ~${t.miles} miles · Travel fee: +$${travel} per quarter shoot`;}
   document.getElementById('c2-price').textContent='$'+total.toLocaleString()+'/qtr';
   addInquiry({type:'content',name,email:em,brand:document.getElementById('c2-brand').value,qty,location:loc,vision:document.getElementById('c2-vis').value,estimate:total,travel});
+  sendEmail('Monthly Content', name, em,
+    `Brand: ${document.getElementById('c2-brand').value}\nVideos/Quarter: ${qty}\nLocation: ${loc}\nEstimate: $${total}/qtr${travel?' (incl. $'+travel+' travel)':''}\nDetails: ${document.getElementById('c2-vis').value}`
+  );
   document.querySelectorAll('#modal-content .ff,#modal-content .btn-fwd').forEach(el=>el.style.display='none');
   document.getElementById('c2-result').style.display='block';
 }
-
+ 
 // CONTACT
 function submitContact(){
   const fn=document.getElementById('cfn').value.trim(),em=document.getElementById('cem').value.trim();
   if(!fn||!em){alert('Please enter your name and email.');return;}
   addInquiry({type:'contact',name:fn+' '+document.getElementById('cln').value.trim(),email:em,interest:document.getElementById('cint').value,message:document.getElementById('cmsg').value});
+  sendEmail('General Contact', fn+' '+document.getElementById('cln').value.trim(), em,
+    `Interest: ${document.getElementById('cint').value}\nMessage: ${document.getElementById('cmsg').value}`
+  );
   document.getElementById('cwrap').style.display='none';document.getElementById('cok').style.display='block';
 }
-
+ 
 // ADMIN
 const ADMIN_PW='samoscenes2025';
 function showAdminLogin(){document.getElementById('adm-login').style.display='flex';}
@@ -935,7 +947,30 @@ function admSettings(el){
   el.innerHTML=`<div class="a-card"><h3>Admin Password</h3><p style="font-size:.8rem;color:var(--fog);margin-bottom:1rem">Current: samoscenes2025. To change, update ADMIN_PW in the site code.</p></div>
   <div class="a-card"><h3>Data</h3><p style="font-size:.8rem;color:var(--fog);margin-bottom:1rem">All inquiries stored in your Claude account and persist between sessions.</p><button onclick="if(confirm('Clear all inquiries?')){DB.inquiries=[];saveDB();admRender('settings');}" style="background:var(--bark);color:var(--cream);border:none;padding:8px 16px;font-size:.75rem;font-weight:600;cursor:pointer;border-radius:3px;">Clear All Inquiries</button></div>`;}
 function exportCSV(){if(!DB.inquiries.length){alert('No inquiries to export.');return;}const h=['Name','Email','Type','Location','Estimate','Travel','Vision','Date'];const rows=DB.inquiries.map(i=>[i.name,i.email,i.type,i.location||'',i.estimate||'',i.travel||'',i.vision||i.message||'',new Date(i.at).toLocaleDateString()]);const csv=[h,...rows].map(r=>r.map(c=>'"'+String(c).replace(/"/g,'""')+'"').join(',')).join('\n');const a=document.createElement('a');a.href='data:text/csv,'+encodeURIComponent(csv);a.download='samoscenes_inquiries.csv';a.click();}
+// EMAILJS
+const EJS_SVC='service_3ehxdwu', EJS_TPL='template_69I7rio', EJS_KEY='4bhpp2TMbjPD3J31x';
+function sendEmail(type, name, email, details){
+  const msg = `
+NEW SAMOSCENES INQUIRY
+----------------------
+Type: ${type}
+Name: ${name}
+Email: ${email}
+${details}
+----------------------
+Sent from samoscenes.com
+  `.trim();
+  emailjs.send(EJS_SVC, EJS_TPL, {
+    inquiry_type: type,
+    name: name,
+    email: email,
+    message: msg
+  }).then(()=>console.log('Email sent')).catch(e=>console.error('Email error',e));
+}
 admRender();
 </script>
+<script src="https://cdn.jsdelivr.net/npm/@emailjs/browser@4/dist/email.min.js"></script>
+<script>emailjs.init({publicKey:'4bhpp2TMbjPD3J31x'});</script>
 </body>
 </html>
+ 
